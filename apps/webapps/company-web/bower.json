@@ -1,0 +1,20 @@
+{
+  "name": "company-web",
+  "homepage": "https://github.com/sashokbg/starter-project",
+  "authors": [
+    "KIRILOV-PRESTATAIRE Alexander <alexander.kirilov-prestataire@bforbank.com>"
+  ],
+  "description": "company web application module",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3"
+  }
+}
