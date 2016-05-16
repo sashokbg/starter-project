@@ -2,3 +2,5 @@
 **/idea/
 .idea
 classes
+apps/webapps/company-web/src/main/resources/static/bower_components
+.gradle
