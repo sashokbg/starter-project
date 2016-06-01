@@ -1,2 +1,9 @@
 server:
     port: 9000
+
+#spring:
+#  jpa:
+#    generate-ddl: true
+#    hibernate:
+#      dialect: org.hibernate.dialect.H2Dialect
+#      ddl-auto: create-drop

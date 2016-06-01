@@ -7,5 +7,18 @@
 </head>
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
+
+<p>List of cities:</p>
+
+<ul class="cities" th:each="city: ${cities}">
+   <li th:text="${city.name}"></li>
+</ul>
+
+-- Filtered
+
+<ul class="cities" th:each="city: ${filteredCities}">
+    <li th:text="${city.name}"></li>
+</ul>
+
 </body>
 </html>
