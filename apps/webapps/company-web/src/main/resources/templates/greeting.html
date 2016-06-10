@@ -11,7 +11,8 @@
 <p>List of cities:</p>
 
 <ul class="cities" th:each="city: ${cities}">
-   <li th:text="${city.name}"></li>
+    <li th:text="${city.name}"></li>
+    <li th:text="${city.address.addressLine}"></li>
 </ul>
 
 -- Filtered
