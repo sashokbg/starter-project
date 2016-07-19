@@ -1,14 +1,15 @@
 server:
     port: 9000
-
 spring:
   jpa:
     generate-ddl: false
-    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
-
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
   datasource:
     platform: mysql
     url: jdbc:mysql://localhost/classicmodels
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
+    initialize: false

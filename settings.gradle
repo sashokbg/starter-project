@@ -1,2 +1,3 @@
 include 'apps:webapps:company-web'
 include 'core:services:company-service'
+include 'core:model'

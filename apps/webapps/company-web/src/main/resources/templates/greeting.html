@@ -10,16 +10,16 @@
 
 <p>List of cities:</p>
 
-<ul class="cities" th:each="city: ${cities}">
-    <li th:text="${city.name}"></li>
-    <li th:text="${city.address.addressLine}"></li>
+<ul class="orders" th:each="o: ${orders}">
+    <li th:text="${o.number}"></li>
+    <li th:text="${o.date}"></li>
 </ul>
 
 -- Filtered
 
-<ul class="cities" th:each="city: ${filteredCities}">
-    <li th:text="${city.name}"></li>
-</ul>
+<!--<ul class="orders" th:each="city: ${filteredCities}">-->
+    <!--<li th:text="${city.name}"></li>-->
+<!--</ul>-->
 
 </body>
 </html>
