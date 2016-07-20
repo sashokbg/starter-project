@@ -10,7 +10,10 @@ import java.util.List;
 @NamedEntityGraph(
         name = "graph.Order.details",
         attributeNodes = {
-            @NamedAttributeNode(value = "details")
+            @NamedAttributeNode(value = "details", subgraph = "graph.OrderDetail.product")
+        },
+        subgraphs = {
+            @NamedSubgraph(name = "graph.OrderDetail.product", attributeNodes = @NamedAttributeNode("product"))
         }
 )
 public class Order implements Serializable{

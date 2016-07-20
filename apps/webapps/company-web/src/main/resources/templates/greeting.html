@@ -15,7 +15,7 @@
     <li th:text="${o.date}"></li>
     <li>
         <ul th:each="od: ${o.details}">
-            <li th:text="'#'+${od.lineNumber} +' - '+ ${od.productCode}+' - '+${od.quantity}+' - '+${od.price}"></li>
+            <li th:text="'#'+${od.lineNumber} +' - '+ ${od.product.code}+' - '+${od.quantity}+' - '+${od.price}"></li>
         </ul>
     </li>
 </ul>

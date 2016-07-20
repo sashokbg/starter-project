@@ -13,9 +13,10 @@ public class OrderDetail implements Serializable{
     @Id
     private Order order;
 
-    @Column(name = "productCode", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "productCode", nullable = false)
     @Id
-    private String productCode;
+    private Product product;
 
     @Column(name = "orderLineNumber")
     private int lineNumber;
@@ -42,14 +43,6 @@ public class OrderDetail implements Serializable{
         this.order = order;
     }
 
-    public String getProductCode() {
-        return productCode;
-    }
-
-    public void setProductCode(String productCode) {
-        this.productCode = productCode;
-    }
-
     public int getQuantity() {
         return quantity;
     }
@@ -66,4 +59,11 @@ public class OrderDetail implements Serializable{
         this.lineNumber = lineNumber;
     }
 
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 }
