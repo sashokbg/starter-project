@@ -8,18 +8,24 @@
 <body>
 <p th:text="'Hello, ' + ${name} + '!'" />
 
-<p>List of cities:</p>
+<p>List of orders:</p>
 
 <ul class="orders" th:each="o: ${orders}">
     <li th:text="${o.number}"></li>
     <li th:text="${o.date}"></li>
+    <li>
+        <ul th:each="od: ${o.details}">
+            <li th:text="'#'+${od.lineNumber} +' - '+ ${od.productCode}+' - '+${od.quantity}+' - '+${od.price}"></li>
+        </ul>
+    </li>
 </ul>
 
 -- Filtered
 
-<!--<ul class="orders" th:each="city: ${filteredCities}">-->
-    <!--<li th:text="${city.name}"></li>-->
-<!--</ul>-->
+<ul class="orders" th:each="o: ${order}">
+    <li th:text="${o.number}"></li>
+    <li th:text="${o.date}"></li>
+</ul>
 
 </body>
 </html>

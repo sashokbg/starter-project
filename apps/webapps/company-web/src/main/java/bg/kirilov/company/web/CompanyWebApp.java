@@ -13,7 +13,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EnableJpaRepositories("bg.kirilov.company.model")
 @EntityScan(basePackages = {"bg.kirilov.company.model"}, basePackageClasses = {Jsr310JpaConverters.class})
-//@ComponentScan({"bg.kirilov.company.model","bg.kirilov.company.web"})
 public class CompanyWebApp {
     public static void main(String[] args) {
         SpringApplication.run(CompanyWebApp.class, args);

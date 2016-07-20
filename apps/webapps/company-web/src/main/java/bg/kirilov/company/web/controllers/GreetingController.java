@@ -19,7 +19,7 @@ public class GreetingController {
     public String greeting(Model model){
         model.addAttribute("name","Alex");
         model.addAttribute("orders", ordersRepository.findAll());
-        model.addAttribute("order", ordersRepository.findByNumber(10247L));
+        model.addAttribute("order", null);//ordersRepository.findByNumber(10247L));
 
         return "greeting";
     }

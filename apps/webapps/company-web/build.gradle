@@ -1,6 +1,7 @@
 buildscript {
     ext {
         springBootVersion = '1.3.5.RELEASE'
+        bowerInstallerVersion = '2.5.1'
     }
     repositories {
         mavenCentral()
@@ -8,6 +9,10 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
+}
+
+plugins {
+    id "com.craigburke.bower-installer" version "2.5.1"
 }
 
 apply plugin: 'java'
@@ -32,4 +37,8 @@ dependencies {
 //    runtime("org.hsqldb:hsqldb")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+bower {
+    installBase = 'src/main/resources/static'
 }
