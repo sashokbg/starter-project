@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name="ORDERS")
+@Table(name="orders")
 @NamedEntityGraph(
         name = "graph.Order.details",
         attributeNodes = {
